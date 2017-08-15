@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "Simon game for FCC",
   "main": "src/index.js",
-  "dependencies": {},
+  "dependencies": {
+    "redux": "3.7.2"
+  },
   "devDependencies": {
     "chai": "4.1.1",
     "deep-freeze": "0.0.1",

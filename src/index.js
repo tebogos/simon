@@ -1,4 +1,6 @@
 
+
+
 const getRandomInt=(min, max)=> {
   min = Math.ceil(min);
   max = Math.floor(max);
@@ -64,10 +66,16 @@ const game=(state={colorList:[],yourList:[],mode:"normal"},action)=>{
 };
 
 
+const { combineReducers } = Redux;
+const simonApp = combineReducers({
+  game,  score});
+const { createStore } =  Redux;
+const store = createStore(simonApp);
 
+console.log(store);
 
-module.exports={    
-    addNextPlay:addNextPlay,
-    game:game,
-    score:score
-};
+//module.exports={    
+//    addNextPlay:addNextPlay,
+//    game:game,
+//    score:score
+//};
