@@ -1,9 +1,9 @@
 
     //Dell XPS 13 (9360) or Dell XPS 13 2in1 (9365)
-    const RED_SOUND = "audio/red.mp3";
-    const BLUE_SOUND = "audio/blue.mp3";
-    const GREEN_SOUND = "audio/green.mp3";
-    const YELLOW_SOUND = "audio/yellow.mp3";
+const RED_SOUND = "https://s3.amazonaws.com/freecodecamp/simonSound1.mp3";
+const BLUE_SOUND = "https://s3.amazonaws.com/freecodecamp/simonSound2.mp3";
+const GREEN_SOUND = "https://s3.amazonaws.com/freecodecamp/simonSound3.mp3";
+const YELLOW_SOUND = "https://s3.amazonaws.com/freecodecamp/simonSound4.mp3";
     let START_GAME;
     /**
      * Generates random numbers
