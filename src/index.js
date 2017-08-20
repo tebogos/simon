@@ -140,6 +140,16 @@ const YELLOW_SOUND = "https://s3.amazonaws.com/freecodecamp/simonSound4.mp3";
         return canReplay && repeatDisplay && (colorListLength > 0) === true ? true : false;
 
     };
+
+const getCounterDigit = () => {
+    let digits = "0";
+    if (store.getState().score.counter < 10)
+        digits = digits + store.getState().score.counter;
+    else
+        digits = store.getState().score.counter;
+
+    return digits;
+};
     /**
      * It checks if the players move has won. If it win then it update win property to true else to false
      */
@@ -157,19 +167,21 @@ const YELLOW_SOUND = "https://s3.amazonaws.com/freecodecamp/simonSound4.mp3";
         if (equal && colorList.length>0) {
            store.dispatch({ type: "UPDATE_WIN", win: true });
            store.dispatch({ type: "INCREAMENT_COUNTER" });
-           let digits = "0";
-           if (store.getState().score.counter < 10)
-               digits = digits + store.getState().score.counter;
-           else
-               digits = store.getState().score.counter;
+           let digits = getCounterDigit();
 
 
            document.getElementById("show-counter").innerHTML = digits;
        }
 
         else if (canReplay()) {
-            if (store.getState().game.mode==="normal")
+            if (store.getState().game.mode === "normal") {
+                document.getElementById("show-counter").innerHTML = "!!";
+                let digits = getCounterDigit();
+                setTimeout(() => { document.getElementById("show-counter").innerHTML = digits; }, 1000);
+
                 displayPlay();
+            }
+                
             if (store.getState().game.mode === "strict") {
                 store.dispatch({ type: "CLEAR_GAME" });
                 store.dispatch({ type: "CLEAR_SCORE" });

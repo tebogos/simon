@@ -20,6 +20,7 @@
     right: 0;
     bottom: 0;
     left: 0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #counter-display {
@@ -136,7 +137,7 @@
 }
 #heading {
 position:absolute;
-    top:145px;
+    top:140px;
     left:170px;
     color:#000000;
     font-size:3.8em;
