@@ -53,7 +53,7 @@ describe("Game Reducer",()=>{
     it("Clear your list" ,()=>{
         let beforeState={colorList:[],yourList:[],mode:"normal"};
         let afterState={colorList:[],yourList:[],mode:"normal"};  
-        let action ={type:"CLEAR_YOUR_PLAY",mode:"normal",yourList:[]};
+        let action = { type:"CLEAR_YOUR_LIST",mode:"normal"};
         deepFreeze(beforeState);
         deepFreeze(action);
         
